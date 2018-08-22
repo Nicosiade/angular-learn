@@ -1,5 +1,14 @@
-<p>
-  convertor rocks !  {{test()}}
-
-
-</p>
+<div>
+  <form #myForm="ngForm">
+    <input [(ngModel)]="formDate.input" name="n" min="0">
+    <select [(ngModel)]="formDate.inputUnit" name="inputUnit">
+      <option *ngFor="let u of globalUnits" [ngValue]="u">{{u}}</option>
+    </select>
+    <br/>
+    {{globalConvert(formDate.input, formDate.inputUnit, formDate.outputUnit)}}
+    <select [(ngModel)]="formDate.outputUnit" name="outputUnit">
+      <option *ngFor="let u of globalUnits" [ngValue]="u">{{u}}</option>
+    </select>
+    <button>OK</button>
+  </form>
+</div>
