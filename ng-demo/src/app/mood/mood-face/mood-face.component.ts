@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-mood-face',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoodFaceComponent implements OnInit {
 
+  @Input()mood :string
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  isHappy(){
+    return this.mood === 'happy';
+  }
+
+  isSoso(){
+    return this.mood === 'soso';
+  }
+
+  isAngry(){
+    return this.mood === 'angry';
   }
 
 }
