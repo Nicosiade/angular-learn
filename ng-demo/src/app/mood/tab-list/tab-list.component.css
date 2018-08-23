@@ -1,0 +1,14 @@
+/* Put the good flex stuff */
+div{
+  display: flex;
+  justify-content: space-between;
+}
+
+span{
+  border: 2px solid black;
+  width: 30%;
+  line-height: 100px;
+  height: 100px;
+  background: aqua;
+  text-align: center;
+}
