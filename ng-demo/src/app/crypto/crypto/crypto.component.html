@@ -1,0 +1,15 @@
+<div>
+  <table>
+    <tr>
+      <td>Nom</td>
+      <td>Symbole</td>
+      <td>Valeur</td>
+    </tr>
+    <tr *ngFor="let c of service.listCoin">
+      <td *ngIf="service.listCoin">{{c.name}}</td>
+      <td *ngIf="service.listCoin">{{c.symbol}}</td>
+      <td *ngIf="service.listCoin">{{c.price_usd}}</td>
+    </tr>
+  </table>
+
+</div>
